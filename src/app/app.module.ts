@@ -10,8 +10,8 @@ import { TabsPage } from '../pages/tabs/tabs';
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
-import {MarkPage} from "../pages/Mark/Mark";
-
+import {UploadPage} from "../pages/Upload/Upload";
+import {ThanksPage} from "../pages/Thanks/Thanks";
 @NgModule({
   declarations: [
     MyApp,
@@ -19,7 +19,8 @@ import {MarkPage} from "../pages/Mark/Mark";
     ContactPage,
     HomePage,
     TabsPage,
-    MarkPage,
+    UploadPage,
+    ThanksPage,
   ],
   imports: [
     BrowserModule,
