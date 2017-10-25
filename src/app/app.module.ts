@@ -33,8 +33,8 @@ import {ThanksPage} from "../pages/Thanks/Thanks";
     ContactPage,
     HomePage,
     TabsPage,
-
-    MarkPage,
+    UploadPage,
+    ThanksPage,
   ],
   providers: [
     StatusBar,

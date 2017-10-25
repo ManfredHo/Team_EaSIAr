@@ -13,7 +13,7 @@ export class HomePage {
   }
 
   gotoNextPage(){
-    this.navCtrl.push(MarkPage);
+    this.navCtrl.push(aboutpage);
   }
 
 }
