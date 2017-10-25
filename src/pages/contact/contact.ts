@@ -1,6 +1,6 @@
-import { Component } from '@angular/core';
-import { NavController } from 'ionic-angular';
-import { AlertController } from 'ionic-angular';
+import {Component} from '@angular/core';
+import {NavController} from "ionic-angular";
+import {UploadPage} from "../Upload/Upload";
 
 @Component({
   selector: 'page-contact',
@@ -8,5 +8,12 @@ import { AlertController } from 'ionic-angular';
 })
 export class ContactPage {
 
+  constructor(public navCtrl: NavController) {
+
+  }
+
+  gotoNextPage() {
+    this.navCtrl.push(UploadPage, {}, {animation: 'ios-transition'});
+  }
 
 }

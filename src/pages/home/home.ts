@@ -1,5 +1,6 @@
-import { Component } from '@angular/core';
+import {Component} from '@angular/core';
 import {AlertController, NavController} from 'ionic-angular';
+import {ContactPage} from "../contact/contact";
 
 @Component({
   selector: 'page-home',
@@ -8,12 +9,9 @@ import {AlertController, NavController} from 'ionic-angular';
 export class HomePage {
 
   constructor(public navCtrl: NavController, public alertController: AlertController) {
-
   }
 
-
-
-  doConfirm() {
+  showWarning() {
     let confirm = this.alertController.create({
       title: 'Terms&Conditions?',
       message: '*T&C*',
@@ -27,7 +25,7 @@ export class HomePage {
         {
           text: 'Agree',
           handler: () => {
-            console.log('Agree clicked');
+            this.navCtrl.push(ContactPage, {}, {animation: 'ios-transition'});
           }
         }
       ]

@@ -1,5 +1,5 @@
 <ion-header>
-  <ion-navbar>
+  <ion-navbar hideBackButton>
     <ion-title>Upload</ion-title>
   </ion-navbar>
 </ion-header>
@@ -9,6 +9,6 @@
   <p>
     Warning text
   </p>
-    <button ion-button round>Upload</button>
+  <button ion-button round (click)="gotoNextPage()">Upload</button>
 
 </ion-content>
