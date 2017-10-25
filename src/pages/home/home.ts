@@ -1,6 +1,5 @@
 import { Component } from '@angular/core';
 import {AlertController, NavController} from 'ionic-angular';
-import {AboutPage} from "../about/about";
 
 @Component({
   selector: 'page-home',
@@ -12,9 +11,7 @@ export class HomePage {
 
   }
 
-  gotoAboutPage(){
-    this.navCtrl.push(AboutPage);
-  }
+
 
   doConfirm() {
     let confirm = this.alertController.create({

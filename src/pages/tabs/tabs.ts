@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 
-import { AboutPage } from '../about/about';
+
 import { ContactPage } from '../contact/contact';
 import { HomePage } from '../home/home';
 import { UploadPage } from '../Upload/Upload';
@@ -11,8 +11,7 @@ import { ThanksPage } from '../Thanks/Thanks';
 export class TabsPage {
 
   tab1Root = HomePage;
-  tab2Root = AboutPage;
-  tab3Root = ContactPage;
+   tab3Root = ContactPage;
   tab4Root = UploadPage;
   tab5Root = ThanksPage;
   constructor() {
