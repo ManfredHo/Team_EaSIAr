@@ -1,6 +1,6 @@
 <ion-header>
   <ion-navbar>
-    <ion-title>Project EaSIAr</ion-title>
+    <ion-title>aSIAn</ion-title>
   </ion-navbar>
 </ion-header>
 
@@ -16,17 +16,14 @@
   <ion-list>
   <ion-item>
     <ion-label>Language</ion-label>
-    <ion-select [(ngModel)]="gaming">
-      <ion-option value="nes">NES</ion-option>
-      <ion-option value="n64">Nintendo64</ion-option>
-      <ion-option value="ps">PlayStation</ion-option>
-      <ion-option value="genesis">Sega Genesis</ion-option>
-      <ion-option value="saturn">Sega Saturn</ion-option>
-      <ion-option value="snes">SNES</ion-option>
+    <ion-select [(ngModel)]="Language">
+      <ion-option value="1">English</ion-option>
+      <ion-option value="2">Mandarin</ion-option>
+      <ion-option value="3">Malay</ion-option>
     </ion-select>
   </ion-item>
 </ion-list>
 
-  <button ion-button (click)="gotoNextPage()">Next Page</button>
+  <button ion-button full color (click)="openAboutPage()">Join SIA!</button>
 
 </ion-content>

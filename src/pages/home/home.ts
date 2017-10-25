@@ -12,8 +12,8 @@ export class HomePage {
 
   }
 
-  gotoNextPage(){
-    this.navCtrl.push(aboutpage);
+  gotoAboutPage(){
+    this.navCtrl.push(AboutPage);
   }
 
 }
