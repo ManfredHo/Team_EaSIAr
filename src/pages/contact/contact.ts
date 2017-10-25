@@ -8,17 +8,5 @@ import { AlertController } from 'ionic-angular';
 })
 export class ContactPage {
 
-  constructor(public navCtrl: NavController, public alertCtrl: AlertController) {
-
-  }
-
-  showAlert() {
-    let alert = this.alertCtrl.create({
-      title: 'New GF!',
-      subTitle: 'Claris or Christabelle',
-      buttons: ['Claris']
-    });
-    alert.present();
-  }
 
 }
