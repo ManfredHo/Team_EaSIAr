@@ -3,7 +3,7 @@ import {NavController} from 'ionic-angular';
 import {ThanksPage} from "../Thanks/Thanks";
 
 @Component({
-  selector: 'page-home',
+  selector: 'page-upload',
   templateUrl: 'Upload.html'
 })
 export class UploadPage {

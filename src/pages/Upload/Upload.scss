@@ -1,0 +1,67 @@
+page-upload {
+  .toolbar-background {
+    background-color: rgb(40, 40, 115);
+  }
+  .toolbar-title {
+    color: rgb(245, 160, 20);
+  }
+  ion-content {
+    background-image: url("../assets/imgs/new227_1481176592.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+
+  }    .item{
+      background: rgba(255, 255, 255, 0.33);
+    }
+
+    input{
+      color: rgb(0, 0, 0);
+    }
+
+    input::-webkit-input-placeholder{
+      color: rgb(50, 50, 50) !important;
+    }
+  div{
+
+
+    p{
+      font-size: 15px;
+    text-align: left;
+        font-family: Georgia, serif;
+      line-height: 1.8;
+      background-color:rgba(118, 118, 118, 0.7);
+          color: rgb(245, 160, 20);
+      padding: 20px;
+      border: 0px solid red;
+    border-radius: 5px;
+
+
+
+    }
+
+  }
+ h1 {
+ position: fixed;
+    bottom: 230px;
+    right: 260px;
+    width: 150px;
+ }
+
+  h2 {
+    position: fixed;
+    bottom: 20px;
+    right: 130px;
+    width: 150px;
+  }
+  .button-inner {
+    background-color: rgb(40, 40, 115);
+    color: rgb(245, 160, 20);
+  }
+
+  .button-md-primary {
+    background-color: rgb(40, 40, 115);
+  }
+
+
+  }

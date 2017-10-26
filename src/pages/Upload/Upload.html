@@ -1,14 +1,25 @@
-<ion-header>
+<ion-header xmlns="http://www.w3.org/1999/html">
   <ion-navbar hideBackButton>
-    <ion-title>Upload</ion-title>
+    <ion-title>Upload Your Video!</ion-title>
   </ion-navbar>
 </ion-header>
 
 <ion-content padding>
 
-  <p>
-    Warning text
-  </p>
-  <button ion-button round (click)="gotoNextPage()">Upload</button>
+  <div>
+    <p>Upload your video with the following content:<br>
+    1. Full Name as shown in Identity Card/Passport<br>
+      2. NRIC number<br>
 
+    3. Answer the question as shown below.
+    </p>
+  </div>
+  <h1>
+<button ion-button color="light" icon-only>
+        <ion-icon name="videocam"></ion-icon>
+  </button>
+  </h1>
+  <h2>
+  <button ion-button color="primary" round (click)="gotoNextPage()">Upload</button>
+</h2>
 </ion-content>
