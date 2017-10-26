@@ -1,9 +1,11 @@
 page-home {
   ion-content {
-    background-image: url("../assets/imgs/SQ_plane_larger.jpg");
-    background-repeat: no-repeat;
+    background-image: url("../assets/imgs/SQ_plane.jpg");
+    background-repeat: space;
+    background-attachment: fixed;
+    background-size: 500px 400px;
 
-    background-size: cover;
+
 
     font-family: Georgia, serif;
 
@@ -44,20 +46,30 @@ page-home {
       }
     }
 
-    .bottom-box{
-      width: 150px;
-      height: 30px;
-      margin: 450px 150px;
+    .middle-box{
+      font-family: sans-serif;
+      font-size: xx-large;
+      color: goldenrod;
+      margin: 180px 50px;
+    }
 
+    .bottom-box{
+      width: 200px;
+      height: 150px;
+      margin: 200px 50px;
     }
 
     .text1{
-      color: #090909;
+      color: goldenrod;
       font-weight: bold;
+      font-size: large;
     }
 
     .text2 {
       color: rgba(249, 249, 249, 0.94);
+    }
+    .button-md-primary{
+      background-color: #003778;
     }
   }
 }
