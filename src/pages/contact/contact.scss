@@ -6,7 +6,11 @@ page-contact {
   .toolbar-title {
     color: rgb(245, 160, 20);
   }
-
+  ion-title {
+    font-size: 15px;
+    font-family: Georgia, serif;
+    text-align: center;
+  }
   ion-content {
     background-image: url("../assets/imgs/SIA_img2.jpg");
     background-repeat: no-repeat;
@@ -18,33 +22,51 @@ page-contact {
   .text-input {
     display: inline-block;
     border-style: solid;
-    }
+  }
 
   div {
-    background-color: rgba(255, 255, 255, 0.01);
+    background-color: rgba(255, 255, 255, 0.0);
     color: rgb(100, 100, 100);
     font-family: Georgia, serif;
 
-    .item{
+    .item {
       background: rgba(255, 255, 255, 0.33);
     }
 
-    input{
+    input {
       color: rgb(0, 0, 0);
     }
 
-    input::-webkit-input-placeholder{
+    input::-webkit-input-placeholder {
       color: rgb(50, 50, 50) !important;
     }
   }
+  button {
+    position: fixed;
+    bottom: 0px;
+    right: -128px;
+    width: 120px;
+    .button-inner {
+      background-color: rgb(40, 40, 115);
+      color: rgb(245, 160, 20);
+    }
 
-  .button-inner {
-    background-color: rgb(40, 40, 115);
-    color: rgb(245, 160, 20);
+    .button-md-primary {
+      background-color: rgb(40, 40, 115);
+    }
   }
 
-  .button-md-primary {
+  .button-md {
     background-color: rgb(40, 40, 115);
   }
+
+  .button-md:hover {
+    background-color: rgb(40, 40, 115);
+  }
+
+  .button-md:hover:not(.disable-hover){
+    background-color: rgb(40, 40, 115);
+  }
+
 }
 
