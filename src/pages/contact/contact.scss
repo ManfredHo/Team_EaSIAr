@@ -1,3 +1,50 @@
 page-contact {
 
+  .toolbar-background {
+    background-color: rgb(40, 40, 115);
+  }
+  .toolbar-title {
+    color: rgb(245, 160, 20);
+  }
+
+  ion-content {
+    background-image: url("../assets/imgs/SIA_img2.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    padding: 30px;
+  }
+
+  .text-input {
+    display: inline-block;
+    border-style: solid;
+    }
+
+  div {
+    background-color: rgba(255, 255, 255, 0.01);
+    color: rgb(100, 100, 100);
+    font-family: Georgia, serif;
+
+    .item{
+      background: rgba(255, 255, 255, 0.33);
+    }
+
+    input{
+      color: rgb(0, 0, 0);
+    }
+
+    input::-webkit-input-placeholder{
+      color: rgb(50, 50, 50) !important;
+    }
+  }
+
+  .button-inner {
+    background-color: rgb(40, 40, 115);
+    color: rgb(245, 160, 20);
+  }
+
+  .button-md-primary {
+    background-color: rgb(40, 40, 115);
+  }
 }
+
