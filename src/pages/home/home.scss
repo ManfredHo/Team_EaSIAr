@@ -1,3 +1,65 @@
 page-home {
+  ion-content {
+    background-image: url("../assets/imgs/SQ_plane_larger.jpg");
+    background-repeat: no-repeat;
 
+    background-size: cover;
+
+    font-family: Georgia, serif;
+
+    .language-elmnt{
+      font-size: small;
+    }
+
+    .language-list {
+      margin-left: auto;
+      margin-top: 10px;
+    }
+    .item{
+      background-color: rgba(225, 225, 225, 0);
+    }
+    .welcome {
+      //width: 50%;
+      color: #090909;
+      border: 1px solid black;
+    }
+
+    .top-box {
+      background-color: #003778;
+      display: flex;
+      flex-direction: row;
+
+      .logo{
+        width: 250px;
+        background-image: url("../assets/imgs/logo-sq.jpg");
+        background-repeat: no-repeat;
+        background-size: contain;
+      }
+      .area1{
+
+      }
+
+      .area2{
+        width: 31%;
+      }
+    }
+
+    .bottom-box{
+      width: 150px;
+      height: 30px;
+      margin: 450px 150px;
+
+    }
+
+    .text1{
+      color: #090909;
+      font-weight: bold;
+    }
+
+    .text2 {
+      color: rgba(249, 249, 249, 0.94);
+    }
+  }
 }
+
+

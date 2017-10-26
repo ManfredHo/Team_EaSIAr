@@ -1,26 +1,3 @@
-
-
-<ion-content padding>
-  <h2>Welcome to SIA Air Crew Application Window Oct 201!</h2>
-  <p>
-    This is the 1st step to joining the SIA Air Crew family.
-    Just a simple step of:
-    -Getting your basic particulars
-    -Send us a 1 min Video of yourself :)
-  </p>
-
-  <ion-list>
-  <ion-item>
-    <ion-label>Language</ion-label>
-    <ion-select [(ngModel)]="Language">
-      <ion-option value="1">English</ion-option>
-      <ion-option value="2">Mandarin</ion-option>
-      <ion-option value="3">Malay</ion-option>
-    </ion-select>
-  </ion-item>
-</ion-list>
-
-
 <ion-header>
   <ion-navbar>
     <ion-title>Welcome</ion-title>
@@ -28,6 +5,34 @@
 </ion-header>
 
 <ion-content padding>
-  <button ion-button color="primary" block (click)="showWarning()">Join SIA!</button>
-</ion-content>
+
+  <div class="top-box">
+    <div class="logo">
+    </div>
+
+    <div class="area2">
+      <ion-list class="language-list">
+        <ion-item class="item">
+          <ion-label class="language-elmnt">
+            <span class="text2">Language </span>
+          </ion-label>
+          <ion-select [(ngModel)]="Language">
+            <ion-option value="1">English</ion-option>
+            <ion-option value="2">Mandarin</ion-option>
+            <ion-option value="3">Malay</ion-option>
+          </ion-select>
+        </ion-item>
+      </ion-list>
+    </div>
+  </div>
+
+  <div class="bottom-box">
+    <button ion-button color="primary" block (click)="showWarning()">
+      <span class="text1">Apply Now </span>
+
+    </button>
+
+  </div>
+
+
 </ion-content>
