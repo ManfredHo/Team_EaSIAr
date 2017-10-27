@@ -1,4 +1,12 @@
 page-home {
+
+   .toolbar-background {
+    background-color: rgb(40, 40, 115);
+  }
+  .toolbar-title {
+    color: rgb(245, 160, 20);
+  }
+
   ion-content {
     background-image: url("../assets/imgs/background1.jpg");
     background-repeat: no-repeat;
@@ -54,7 +62,7 @@ page-home {
     .middle-box {
       font-family: AvenirLTStd-Book;
       font-size: 32px;
-      color: rgba(217, 204, 190, 0.85);
+      color: rgba(245, 160, 20, 1.1);
       text-align: center;
       line-height: 36px;
       padding: 90px 40px 0px;
@@ -66,17 +74,24 @@ page-home {
     }
 
     .text1 {
-      color: #b58818;
       font-weight: bold;
       font-size: large;
+      color: rgb(245, 160, 20);
     }
 
     .text2 {
       color: rgba(249, 249, 249, 0.94);
     }
     .button-md-primary {
-      background-color: #003778;
+      background-color: rgb(40, 40, 115);
     }
+    .button-md:hover {
+    background-color: rgb(40, 40, 115);
+  }
+
+  .button-md:hover:not(.disable-hover) {
+    background-color: rgb(40, 40, 115);
+  }
 
   }
 }
