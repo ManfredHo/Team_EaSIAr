@@ -1,5 +1,5 @@
 import {Component} from '@angular/core';
-import {NavController} from "ionic-angular";
+import {AlertController, NavController} from "ionic-angular";
 import {UploadPage} from "../Upload/Upload";
 
 @Component({
@@ -7,10 +7,9 @@ import {UploadPage} from "../Upload/Upload";
   templateUrl: 'contact.html'
 })
 export class ContactPage {
-  private mainForm: ApplicantData = {
-  };
+  private mainForm: ApplicantData = {};
 
-  constructor(public navCtrl: NavController) {
+  constructor(public navCtrl: NavController, public alertCtrl: AlertController) {
     // this.mainForm['full_name'] = 'testing';
     // this.mainForm['id_number'] = '123123XX';
     // this.mainForm['gender'] = '1';
@@ -23,9 +22,54 @@ export class ContactPage {
   }
 
   gotoNextPage() {
-    this.navCtrl.push(UploadPage,
-      {'data': this.mainForm},
-      {animation: 'ios-transition'});
+    if (this.checkForm()) {
+      this.navCtrl.push(UploadPage,
+        {'data': this.mainForm},
+        {animation: 'ios-transition'});
+    }
+  }
+
+  checkForm() {
+    let fields = [
+      'full_name',
+      'id_number',
+      'gender',
+      'nationality',
+      'race',
+      'employment_status',
+      'occupation',
+      'email',
+      'phone_number',
+    ];
+
+    /// make sure the fields are not empty
+
+    let emptyCount = 0;
+    let invalidFields = [];
+
+    fields.forEach(key => {
+      if (this.mainForm[key] === undefined || this.mainForm[key] === null || this.mainForm[key].length === 0) {
+        emptyCount++;
+        invalidFields.push(key);
+      }
+    });
+
+    if (emptyCount > 0) {
+      // prompt
+
+      console.log("Empty fields", invalidFields);
+
+      const alert = this.alertCtrl.create({
+        title: 'Oops!',
+        subTitle: 'Please ensure that all fields are filled up before proceeding!',
+        buttons: ['Dismiss']
+      });
+      alert.present();
+    } else {
+      return true;
+    }
+
+    return false;
   }
 }
 

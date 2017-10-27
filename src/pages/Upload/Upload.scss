@@ -93,7 +93,27 @@ page-upload {
   .upload-video-button {
     width: 240px;
     height: 183px;
+    margin-bottom: 12px;
+  }
 
-    margin-bottom: 32px;
+  .video-quality-info {
+    display: none;
+    text-align: center;
+    margin-bottom: 12px;
+
+    div {
+      display: inline-block;
+      background: rgba(255, 255, 255, 0.8);
+      padding: 8px;
+      border-radius: 5px;
+      width: 240px;
+
+      font-font: inherit;
+    }
+
+    &.active {
+      display: block;
+    }
+
   }
 }

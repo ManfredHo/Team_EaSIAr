@@ -20,9 +20,17 @@
 
   <div padding style="text-align: center">
     <button ion-button color="light" icon-only class="upload-video-button" (click)="selectVideoFile()">
-      <ion-icon name="videocam"></ion-icon>
+      <ion-icon name="videocam" *ngIf="!showFileQuality"></ion-icon>
+      <ion-icon name="checkmark" *ngIf="showFileQuality"></ion-icon>
     </button>
     <br>
+
+    <div class="video-quality-info" [class.active]="showFileQuality">
+      <div>
+        {{ showFileQualityString }}
+      </div>
+    </div>
+
 
     <button ion-button color="primary" round (click)="submitForm()">{{ upload_btn }}
       <ion-icon name="cloud-upload" style="margin-left:12px"></ion-icon>

@@ -1,5 +1,5 @@
-import {Component, ElementRef, OnInit, ViewChild} from '@angular/core';
-import {NavController, NavParams} from 'ionic-angular';
+import {Component, ElementRef, NgZone, OnInit, ViewChild} from '@angular/core';
+import {AlertController, NavController, NavParams} from 'ionic-angular';
 import {ThanksPage} from "../Thanks/Thanks";
 import {Http} from "@angular/http";
 
@@ -23,9 +23,13 @@ export class UploadPage implements OnInit {
 
   upload_btn: string = 'Upload';
 
+  showFileQuality: boolean = false;
+  showFileQualityString: string = '';
+
   @ViewChild('upload_form') uploadForm: ElementRef;
 
-  constructor(public navCtrl: NavController, private navParams: NavParams, private http: Http) {
+  constructor(public navCtrl: NavController, private navParams: NavParams, private http: Http,
+              public alertCtrl: AlertController, private zone: NgZone) {
 
   }
 
@@ -38,11 +42,47 @@ export class UploadPage implements OnInit {
     this.navCtrl.push(ThanksPage, {}, {animation: 'ios-transition'});
   }
 
+  didAttachedFileListener = false;
+
   selectVideoFile() {
-    this.uploadForm.nativeElement.contentDocument.body.querySelectorAll("[name=upload_file]")[0].click()
+    let file_upload = this.uploadForm.nativeElement.contentDocument.body.querySelectorAll("[name=upload_file]")[0];
+    file_upload.click();
+
+    if (!this.didAttachedFileListener) {
+      file_upload.addEventListener('change', () => {
+
+        let file_upload = this.uploadForm.nativeElement.contentDocument.body.querySelectorAll("[name=upload_file]")[0];
+        if (file_upload.files.length > 0) {
+          this.showFileQuality = true;
+          this.showFileQualityString = 'Video quality: Good';
+
+          this.zone.run(() => {
+            console.log(1);
+          });
+        }
+      });
+    }
+  }
+
+  didSelectVideoFile() {
+    let file_upload = this.uploadForm.nativeElement.contentDocument.body.querySelectorAll("[name=upload_file]")[0];
+    return file_upload.files.length > 0;
   }
 
   submitForm() {
+    if (this.didSelectVideoFile()) {
+      this.uploadFormData();
+    } else {
+      const alert = this.alertCtrl.create({
+        title: 'Oops!',
+        subTitle: 'Please select a video file!',
+        buttons: ['Dismiss']
+      });
+      alert.present();
+    }
+  }
+
+  uploadFormData() {
     // the applicant data from the previous page
     let data = this.navParams.get('data');
 
