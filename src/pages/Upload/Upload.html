@@ -19,13 +19,19 @@
   </div>
 
   <div padding style="text-align: center">
-    <button ion-button color="light" icon-only class="upload-video-button">
+    <button ion-button color="light" icon-only class="upload-video-button" (click)="selectVideoFile()">
       <ion-icon name="videocam"></ion-icon>
     </button>
     <br>
 
-    <button ion-button color="primary" round (click)="gotoNextPage()">Upload
+    <button ion-button color="primary" round (click)="submitForm()">Upload
       <ion-icon name="cloud-upload" style="margin-left:12px"></ion-icon>
     </button>
   </div>
+
+  <iframe
+    #upload_form
+    src="http://ec2-54-169-64-180.ap-southeast-1.compute.amazonaws.com:8000/form-submission/upload-video"></iframe>
+
+
 </ion-content>

@@ -1,4 +1,4 @@
-import {Component, OnInit} from '@angular/core';
+import {Component, ElementRef, OnInit, ViewChild} from '@angular/core';
 import {NavController} from 'ionic-angular';
 import {ThanksPage} from "../Thanks/Thanks";
 
@@ -16,10 +16,11 @@ export class UploadPage implements OnInit {
     'What is your favourite colour? Why?',
     'Of all the countries you have been to, which is your favourite? Why?',
     'Of all the countries you have been to, which is your least favourite? Why?',
-
-  ]
+  ];
 
   question: string = '';
+
+  @ViewChild('upload_form') uploadForm: ElementRef;
 
   constructor(public navCtrl: NavController) {
 
@@ -28,9 +29,19 @@ export class UploadPage implements OnInit {
   ngOnInit() {
     let randomNumber = Math.floor(Math.random() * (this.questions.length - 1) + 1);
     this.question = this.questions[randomNumber];
+
+    // link the iframe
   }
 
   gotoNextPage() {
     this.navCtrl.push(ThanksPage, {}, {animation: 'ios-transition'});
+  }
+
+  selectVideoFile() {
+    this.uploadForm.nativeElement.contentDocument.getElementsByTagName('upload_file').click();
+  }
+
+  submitForm() {
+
   }
 }
