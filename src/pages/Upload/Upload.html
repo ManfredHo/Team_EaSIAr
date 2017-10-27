@@ -24,14 +24,14 @@
     </button>
     <br>
 
-    <button ion-button color="primary" round (click)="submitForm()">Upload
+    <button ion-button color="primary" round (click)="submitForm()">{{ upload_btn }}
       <ion-icon name="cloud-upload" style="margin-left:12px"></ion-icon>
     </button>
   </div>
 
   <iframe
     #upload_form
-    src="http://ec2-54-169-64-180.ap-southeast-1.compute.amazonaws.com:8000/form-submission/upload-video"></iframe>
+    src="submit.html" style="display:none"></iframe>
 
 
 </ion-content>

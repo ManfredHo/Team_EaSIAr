@@ -11,6 +11,7 @@ import {StatusBar} from '@ionic-native/status-bar';
 import {SplashScreen} from '@ionic-native/splash-screen';
 import {UploadPage} from "../pages/Upload/Upload";
 import {ThanksPage} from "../pages/Thanks/Thanks";
+import {HttpModule} from "@angular/http";
 
 @NgModule({
   declarations: [
@@ -23,7 +24,8 @@ import {ThanksPage} from "../pages/Thanks/Thanks";
   ],
   imports: [
     BrowserModule,
-    IonicModule.forRoot(MyApp)
+    IonicModule.forRoot(MyApp),
+    HttpModule
   ],
   bootstrap: [IonicApp],
   entryComponents: [

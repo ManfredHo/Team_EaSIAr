@@ -1,6 +1,7 @@
 import {Component, ElementRef, OnInit, ViewChild} from '@angular/core';
-import {NavController} from 'ionic-angular';
+import {NavController, NavParams} from 'ionic-angular';
 import {ThanksPage} from "../Thanks/Thanks";
+import {Http} from "@angular/http";
 
 @Component({
   selector: 'page-upload',
@@ -20,17 +21,17 @@ export class UploadPage implements OnInit {
 
   question: string = '';
 
+  upload_btn: string = 'Upload';
+
   @ViewChild('upload_form') uploadForm: ElementRef;
 
-  constructor(public navCtrl: NavController) {
+  constructor(public navCtrl: NavController, private navParams: NavParams, private http: Http) {
 
   }
 
   ngOnInit() {
     let randomNumber = Math.floor(Math.random() * (this.questions.length - 1) + 1);
     this.question = this.questions[randomNumber];
-
-    // link the iframe
   }
 
   gotoNextPage() {
@@ -38,10 +39,48 @@ export class UploadPage implements OnInit {
   }
 
   selectVideoFile() {
-    this.uploadForm.nativeElement.contentDocument.getElementsByTagName('upload_file').click();
+    this.uploadForm.nativeElement.contentDocument.body.querySelectorAll("[name=upload_file]")[0].click()
   }
 
   submitForm() {
+    // the applicant data from the previous page
+    let data = this.navParams.get('data');
 
+    let names = [
+      'full_name',
+      'id_number',
+      'phone_number',
+      'gender',
+      'race',
+      'nationality',
+      'birth_country',
+      'country_of_residence',
+      'employment_status',
+      'occupation',
+      'address',
+      'email'
+    ];
+
+    let frameBody = this.uploadForm.nativeElement.contentDocument.body;
+
+    names.forEach(name => {
+      frameBody.querySelectorAll("[name=" + name + "]")[0].value = data[name];
+    });
+
+    frameBody.querySelectorAll("[name=submit_button]")[0].click();
+
+    this.upload_btn = 'Uploading...';
+
+    let pollInterval = setInterval(() => {
+      // check the frame bod
+      this.http.post('http://ec2-54-169-64-180.ap-southeast-1.compute.amazonaws.com:8000/form-submission/has-email', {email: data['email']}).subscribe(response => {
+        console.log('Checking if uploaded', response.json()['response']);
+        if (response.json()['response'] === 'Yes') {
+          this.gotoNextPage();
+          clearInterval(pollInterval);
+        }
+      });
+
+    }, 500);
   }
 }
