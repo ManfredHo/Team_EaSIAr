@@ -68,5 +68,15 @@ page-contact {
     background-color: rgb(40, 40, 115);
   }
 
+  .select {
+    .button-inner {
+      background: none;
+    }
+  }
+
+  .select-label {
+    color: #333 !important;
+    margin-left: 8px;
+  }
 }
 

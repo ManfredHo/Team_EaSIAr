@@ -18,19 +18,41 @@
       <ion-input type="text" placeholder="Identification Card/FIN No" [(ngModel)]="mainForm['id_number']"></ion-input>
     </ion-item>
     <ion-item>
-      <ion-input type="text" placeholder="Gender" [(ngModel)]="mainForm['gender']"></ion-input>
+      <!--<ion-input type="text" placeholder="Gender" [(ngModel)]="mainForm['gender']"></ion-input>-->
+      <ion-label class="select-label">Gender</ion-label>
+      <ion-select [(ngModel)]="mainForm['gender']">
+        <ion-option value="1">Male</ion-option>
+        <ion-option value="2">Female</ion-option>
+      </ion-select>
     </ion-item>
     <ion-item>
       <ion-input type="text" placeholder="Nationality" [(ngModel)]="mainForm['nationality']"></ion-input>
     </ion-item>
     <ion-item>
-      <ion-input type="text" placeholder="Race" [(ngModel)]="mainForm['race']"></ion-input>
+      <!--<ion-input type="text" placeholder="Race" [(ngModel)]="mainForm['race']"></ion-input>-->
+
+      <ion-label class="select-label">Race</ion-label>
+      <ion-select [(ngModel)]="mainForm['race']">
+        <ion-option value="1">Chinese</ion-option>
+        <ion-option value="2">Malay</ion-option>
+        <ion-option value="3">Indian</ion-option>
+        <ion-option value="4">Others</ion-option>
+      </ion-select>
+
     </ion-item>
     <ion-item>
       <ion-input type="text" placeholder="Highest Educational Qualification"></ion-input>
     </ion-item>
     <ion-item>
-      <ion-input type="text" placeholder="Employment Status" [(ngModel)]="mainForm['employment_status']"></ion-input>
+      <!--<ion-input type="text" placeholder="Employment Status" [(ngModel)]="mainForm['employment_status']"></ion-input>-->
+
+      <ion-label class="select-label">Employment Status</ion-label>
+      <ion-select [(ngModel)]="mainForm['employment_status']">
+        <ion-option value="1">Employed</ion-option>
+        <ion-option value="2">Self-employed</ion-option>
+        <ion-option value="3">Unemployed</ion-option>
+      </ion-select>
+
     </ion-item>
     <ion-item>
       <ion-input type="text" placeholder="Recent/Current Occupation" [(ngModel)]="mainForm['occupation']"></ion-input>
