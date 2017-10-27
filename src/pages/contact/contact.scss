@@ -24,7 +24,7 @@ page-contact {
     border-style: solid;
   }
 
-  div {
+  .main-form {
     background-color: rgba(255, 255, 255, 0.0);
     color: rgb(100, 100, 100);
     font-family: Georgia, serif;
@@ -42,10 +42,10 @@ page-contact {
     }
   }
   button {
-    position: fixed;
-    bottom: 0px;
-    right: -128px;
-    width: 120px;
+    //position: fixed;
+    //bottom: 0px;
+    //right: -128px;
+    //width: 120px;
     .button-inner {
       background-color: rgb(40, 40, 115);
       color: rgb(245, 160, 20);
@@ -64,7 +64,7 @@ page-contact {
     background-color: rgb(40, 40, 115);
   }
 
-  .button-md:hover:not(.disable-hover){
+  .button-md:hover:not(.disable-hover) {
     background-color: rgb(40, 40, 115);
   }
 

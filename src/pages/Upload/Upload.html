@@ -8,25 +8,24 @@
 
   <div>
     <p>Upload your video with the following content:<br>
-    1. Full Name as shown in Identity Card/Passport<br>
+      1. Full Name as shown in Identity Card/Passport<br>
       2. NRIC number<br>
 
-    3. Answer the question as shown below.
+      3. Answer the question as shown below.
     </p>
   </div>
-    <div>
-      <h3>{{ question }}</h3>
-    </div>
+  <div>
+    <h3>{{ question }}</h3>
+  </div>
 
-  <h1>
-<button ion-button color="light" icon-only>
-        <ion-icon name="videocam"></ion-icon>
-  </button>
+  <div padding style="text-align: center">
+    <button ion-button color="light" icon-only class="upload-video-button">
+      <ion-icon name="videocam"></ion-icon>
+    </button>
+    <br>
 
-
-
-  </h1>
-  <h2>
-  <button ion-button color="primary" round (click)="gotoNextPage()">Upload</button>
-</h2>
+    <button ion-button color="primary" round (click)="gotoNextPage()">Upload
+      <ion-icon name="cloud-upload" style="margin-left:12px"></ion-icon>
+    </button>
+  </div>
 </ion-content>

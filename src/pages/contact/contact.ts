@@ -8,12 +8,24 @@ import {UploadPage} from "../Upload/Upload";
 })
 export class ContactPage {
 
+
+
   constructor(public navCtrl: NavController) {
 
   }
 
   gotoNextPage() {
+
+    // get all the data on the page
+
     this.navCtrl.push(UploadPage, {}, {animation: 'ios-transition'});
   }
 
+}
+
+export interface FormData{
+  full_name: string;
+  id_number: string;
+  gender:string;
+  
 }

@@ -4,11 +4,11 @@ page-home {
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: 498px 759px;
-    background-position:1px 50px;
+    background-position: 1px 50px;
 
     font-family: AvenirLTStd-Book;
 
-    .language-elmnt{
+    .language-elmnt {
       font-size: 95%;
     }
 
@@ -16,7 +16,7 @@ page-home {
       margin-left: auto;
       margin-top: 10px;
     }
-    .item{
+    .item {
       background-color: rgba(225, 225, 225, 0);
     }
     .welcome {
@@ -30,12 +30,11 @@ page-home {
       display: flex;
       flex-direction: row;
       width: 500px;
-      margin:auto;
 
-      position: fixed;
+      //margin:auto;
+      //position: fixed;
 
-
-      .logo{
+      .logo {
         width: 300px;
         background-image: url("../assets/imgs/logo-sq.jpg");
         background-repeat: no-repeat;
@@ -43,33 +42,30 @@ page-home {
         background-position: left;
 
       }
-      .area1{
+      .area1 {
 
       }
 
-      .area2{
+      .area2 {
         width: 31%;
       }
     }
 
-    .middle-box{
-      font-family:AvenirLTStd-Book;
-      font-size: x-large;
-      color: rgba(217, 204, 190,0.85);
-      margin: 180px 50px;
+    .middle-box {
+      font-family: AvenirLTStd-Book;
+      font-size: 32px;
+      color: rgba(217, 204, 190, 0.85);
       text-align: center;
-      position: fixed;
+      line-height: 36px;
+      padding: 90px 40px 0px;
     }
 
-    .bottom-box{
-      width: 250px;
-      height: 150px;
-      margin: 500px 100px;
-      position: fixed;
-
+    .bottom-box {
+      margin-top: 100px;
+      text-align: center;
     }
 
-    .text1{
+    .text1 {
       color: #b58818;
       font-weight: bold;
       font-size: large;
@@ -78,12 +74,12 @@ page-home {
     .text2 {
       color: rgba(249, 249, 249, 0.94);
     }
-    .button-md-primary{
+    .button-md-primary {
       background-color: #003778;
     }
 
-}
   }
+}
 
 
 

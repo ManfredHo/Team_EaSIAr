@@ -1,12 +1,12 @@
-page-thanks{
+page-thanks {
   .toolbar-background {
     background-color: rgb(40, 40, 115);
   }
-  ion-title{
+  ion-title {
     font-size: 15px;
     font-family: Georgia, serif;
-     text-align: center;
-}
+    text-align: center;
+  }
   ion-content {
     background-image: url("../assets/imgs/SIALAST.jpeg");
     background-repeat: no-repeat;
@@ -19,24 +19,36 @@ page-thanks{
   }
 
   p {
-    font-size: 15px;
+    font-size: 16px;
 
     font-family: Georgia, serif;
-    line-height: 2;
-    position: fixed;
-    bottom: 350px;
-    right: 2px;
-    width: 400px;
+    //line-height: 2;
 
     color: rgb(245, 160, 20);
+
+    background: rgba(0, 0, 0, 0.2);
+
+    margin: 24px;
+    padding: 24px;
+
+    line-height: 32px;
+
+    border-radius: 5px;
+
+    //    position: fixed;
+    //bottom: 350px;
+    //right: 2px;
+    //width: 400px;
+    margin-bottom: 32px;
+
   }
 
-  h2 {
-    position: fixed;
-    bottom: 20px;
-    right: 118px;
-    width: 150px;
-  }
+  //h2 {
+  //  position: fixed;
+  //  bottom: 20px;
+  //  right: 118px;
+  //  width: 150px;
+  //}
   .button-inner {
     background-color: rgb(40, 40, 115);
     color: rgb(245, 160, 20);
@@ -45,7 +57,7 @@ page-thanks{
   .button-md-primary {
     background-color: rgb(40, 40, 115);
   }
-.button-md {
+  .button-md {
     background-color: rgb(40, 40, 115);
   }
 
