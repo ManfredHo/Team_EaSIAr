@@ -66,7 +66,7 @@ export class UploadPage implements OnInit {
     names.forEach(name => {
 
       if (name === 'gender') {
-        switch (data['gender'].tolower()) {
+        switch (data['gender'].toLowerCase()) {
           case 'male':
             data['gender'] = 1;
             break;
@@ -79,7 +79,7 @@ export class UploadPage implements OnInit {
       }
 
       if (name === 'race') {
-        switch (data['race'].tolower()) {
+        switch (data['race'].toLowerCase()) {
           case 'chinese':
             data['race'] = 1;
             break;
@@ -99,7 +99,7 @@ export class UploadPage implements OnInit {
       ;
 
       if (name === 'employment_status') {
-        switch (data['employment_status'].tolower()) {
+        switch (data['employment_status'].toLowerCase()) {
           case 'unemployed':
             data['employment_status'] = 1;
             break;
