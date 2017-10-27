@@ -64,6 +64,57 @@ export class UploadPage implements OnInit {
     let frameBody = this.uploadForm.nativeElement.contentDocument.body;
 
     names.forEach(name => {
+
+      if (name === 'gender') {
+        switch (data['gender'].tolower()) {
+          case 'male':
+            data['gender'] = 1;
+            break;
+          case 'female':
+            data['gender'] = 2;
+            break;
+          default:
+            data['gender'] = 1;
+        }
+      }
+
+      if (name === 'race') {
+        switch (data['race'].tolower()) {
+          case 'chinese':
+            data['race'] = 1;
+            break;
+          case 'malay':
+            data['race'] = 2;
+            break;
+          case 'indian':
+            data['race'] = 3;
+            break;
+          case 'others':
+            data['race'] = 4;
+            break;
+          default:
+            data['race'] = 1;
+        }
+      }
+      ;
+
+      if (name === 'employment_status') {
+        switch (data['employment_status'].tolower()) {
+          case 'unemployed':
+            data['employment_status'] = 1;
+            break;
+          case 'self-employed':
+          case 'self employed':
+            data['race'] = 2;
+            break;
+          case 'employed':
+            data['employment_status'] = 3;
+            break;
+          default:
+            data['employment_status'] = 2;
+        }
+      }
+
       frameBody.querySelectorAll("[name=" + name + "]")[0].value = data[name];
     });
 
