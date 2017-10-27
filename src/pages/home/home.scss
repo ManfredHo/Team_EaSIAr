@@ -1,16 +1,15 @@
 page-home {
   ion-content {
-    background-image: url("../assets/imgs/SQ_plane.jpg");
-    background-repeat: space;
+    background-image: url("../assets/imgs/background1.jpg");
+    background-repeat: no-repeat;
     background-attachment: fixed;
-    background-size: 500px 400px;
+    background-size: 498px 759px;
+    background-position:1px 50px;
 
-
-
-    font-family: Georgia, serif;
+    font-family: AvenirLTStd-Book;
 
     .language-elmnt{
-      font-size: small;
+      font-size: 95%;
     }
 
     .language-list {
@@ -27,15 +26,22 @@ page-home {
     }
 
     .top-box {
-      background-color: #003778;
+      background-color: transparent;
       display: flex;
       flex-direction: row;
+      width: 500px;
+      margin:auto;
+
+      position: fixed;
+
 
       .logo{
-        width: 250px;
+        width: 300px;
         background-image: url("../assets/imgs/logo-sq.jpg");
         background-repeat: no-repeat;
         background-size: contain;
+        background-position: left;
+
       }
       .area1{
 
@@ -47,20 +53,24 @@ page-home {
     }
 
     .middle-box{
-      font-family: sans-serif;
-      font-size: xx-large;
-      color: goldenrod;
+      font-family:AvenirLTStd-Book;
+      font-size: x-large;
+      color: rgba(217, 204, 190,0.85);
       margin: 180px 50px;
+      text-align: center;
+      position: fixed;
     }
 
     .bottom-box{
-      width: 200px;
+      width: 250px;
       height: 150px;
-      margin: 200px 50px;
+      margin: 500px 100px;
+      position: fixed;
+
     }
 
     .text1{
-      color: goldenrod;
+      color: #b58818;
       font-weight: bold;
       font-size: large;
     }
@@ -71,7 +81,9 @@ page-home {
     .button-md-primary{
       background-color: #003778;
     }
-  }
+
 }
+  }
+
 
 
