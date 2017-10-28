@@ -37,13 +37,15 @@ page-home {
       background-color: transparent;
       display: flex;
       flex-direction: row;
-      width: 500px;
+      width: 100%;
+
+      justify-content: space-between;
 
       //margin:auto;
       //position: fixed;
 
       .logo {
-        width: 300px;
+        width: 200px;
         background-image: url("../assets/imgs/logo-sq.jpg");
         background-repeat: no-repeat;
         background-size: contain;
@@ -55,7 +57,7 @@ page-home {
       }
 
       .area2 {
-        width: 31%;
+        width: 50%;
       }
     }
 
